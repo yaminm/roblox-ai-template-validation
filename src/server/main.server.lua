@@ -83,6 +83,7 @@ local function spawnCrystal(index: number)
 		Color3.fromRGB(160, 80, 255)
 	)
 	crystal.Material = Enum.Material.Neon
+	crystal.CanCollide = false
 	local available = true
 	crystal.Touched:Connect(function(hit)
 		if not available then

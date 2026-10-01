@@ -129,9 +129,9 @@ Do not publish/deploy, mutate production DataStores/Open Cloud, upload paid/publ
 
 ## Current status and next mission
 
-The project was created as the validation copy of the reusable template and contains an initial Crystal Rush V1 implementation. It has not yet been proven end-to-end on the user's workstation with Roblox Studio MCP.
+The project was created as the validation copy of the reusable template and contains a Crystal Rush V1 implementation. Repository verification and single-player Studio/MCP acceptance passed on 2026-10-02; see [VALIDATION.md](VALIDATION.md) for observed evidence and limits.
 
-The next mission for Codex is therefore validation and repair, not feature expansion:
+Future changes should repeat the validation and repair workflow, without feature expansion:
 
 1. inspect the repository and understand its contract;
 2. make the local toolchain/install/bootstrap work cleanly;

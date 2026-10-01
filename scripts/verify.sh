@@ -41,7 +41,7 @@ luau-lsp analyze \
   --definitions=build/globalTypes.d.luau \
   --sourcemap=build/sourcemap.json \
   --base-luaurc=.luaurc \
-  src
+  src tests
 
 echo "==> Unit tests"
 lune run tests/Economy.spec.luau

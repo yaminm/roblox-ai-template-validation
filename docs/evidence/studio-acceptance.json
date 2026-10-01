@@ -1,0 +1,477 @@
+{
+  "date": "2026-10-02",
+  "studio_id": "6b0f5a3b-d208-4fff-95c4-18da3525c1fd",
+  "baseline": "4c7d23e",
+  "passed": true,
+  "sourceUpdates": [
+    "src/client/main.client.lua",
+    "src/server/main.server.lua"
+  ],
+  "checks": [
+    {
+      "scenario": "clean_fresh_state",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 138,
+        "Carried": 0,
+        "SpeedLevel": 0,
+        "Coins": 0
+      },
+      "position": "2.53857421875, 4.0963134765625, 25.3099365234375",
+      "walkSpeed": 16,
+      "health": 100
+    },
+    {
+      "scenario": "clean_round_observer_start",
+      "context": "Server",
+      "Restarted": false,
+      "Ticked": false,
+      "SawZero": false,
+      "InitialTime": 131
+    },
+    {
+      "scenario": "clean_insufficient_funds_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 0   Speed +0   Time 123s",
+      "attributes": {
+        "SpeedLevel": 0,
+        "Carried": 0,
+        "RoundTime": 123,
+        "Coins": 0
+      },
+      "position": "19.198726654052734, 4.096319675445557, 35.00016784667969",
+      "walkSpeed": 16,
+      "health": 100
+    },
+    {
+      "scenario": "clean_insufficient_funds_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 116,
+        "Carried": 0,
+        "SpeedLevel": 0,
+        "Coins": 0
+      },
+      "position": "19.19873046875, 4.0963134765625, 35.0001220703125",
+      "walkSpeed": 16,
+      "health": 100
+    },
+    {
+      "scenario": "clean_collect_three",
+      "context": "Client",
+      "state": {
+        "hud": "Crystals 3/5   Coins 0   Speed +0   Time 104s",
+        "attributes": {
+          "Coins": 0,
+          "Carried": 3,
+          "RoundTime": 104,
+          "SpeedLevel": 0
+        },
+        "position": "-38.13302993774414, 3.0963196754455566, 4.237054347991943",
+        "walkSpeed": 16,
+        "health": 100
+      },
+      "collected": [
+        "Crystal14",
+        "Crystal1",
+        "Crystal18"
+      ]
+    },
+    {
+      "scenario": "clean_collect_three_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 97,
+        "Carried": 3,
+        "SpeedLevel": 0,
+        "Coins": 0
+      },
+      "position": "-38.133056640625, 3.0963134765625, 4.237060546875",
+      "walkSpeed": 16,
+      "health": 100
+    },
+    {
+      "scenario": "clean_crystal_respawn",
+      "context": "Client",
+      "crystal": "Crystal14",
+      "state": {
+        "hud": "Crystals 3/5   Coins 0   Speed +0   Time 75s",
+        "attributes": {
+          "Coins": 0,
+          "Carried": 3,
+          "RoundTime": 75,
+          "SpeedLevel": 0
+        },
+        "position": "-45, 3.094703197479248, 35",
+        "walkSpeed": 16,
+        "health": 100
+      },
+      "available": true
+    },
+    {
+      "scenario": "clean_deposit_three_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 30   Speed +0   Time 67s",
+      "attributes": {
+        "SpeedLevel": 0,
+        "Carried": 0,
+        "RoundTime": 67,
+        "Coins": 30
+      },
+      "position": "-0.7798356413841248, 4.096319675445557, 35.00004196166992",
+      "walkSpeed": 16,
+      "health": 100
+    },
+    {
+      "scenario": "clean_deposit_three_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 61,
+        "Carried": 0,
+        "SpeedLevel": 0,
+        "Coins": 30
+      },
+      "position": "-0.77978515625, 4.0963134765625, 35",
+      "walkSpeed": 16,
+      "health": 100
+    },
+    {
+      "scenario": "clean_first_purchase_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 0   Speed +1   Time 53s",
+      "attributes": {
+        "SpeedLevel": 1,
+        "Carried": 0,
+        "RoundTime": 53,
+        "Coins": 0
+      },
+      "position": "19.183528900146484, 4.096319675445557, 35.0002555847168",
+      "walkSpeed": 20,
+      "health": 100
+    },
+    {
+      "scenario": "clean_first_upgrade_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 45,
+        "Carried": 0,
+        "SpeedLevel": 1,
+        "Coins": 0
+      },
+      "position": "19.1834716796875, 4.0963134765625, 35.000244140625",
+      "walkSpeed": 20,
+      "health": 100
+    },
+    {
+      "scenario": "clean_first_upgrade_hud",
+      "context": "Client",
+      "position": "168.5, 555",
+      "viewport": "797, 693",
+      "text": "Crystals 0/5   Coins 0   Speed +1   Time 38s",
+      "fits": true,
+      "size": "460, 56"
+    },
+    {
+      "scenario": "clean_collect_five",
+      "context": "Client",
+      "state": {
+        "hud": "Crystals 5/5   Coins 0   Speed +1   Time 169s",
+        "attributes": {
+          "Coins": 0,
+          "Carried": 5,
+          "RoundTime": 169,
+          "SpeedLevel": 1
+        },
+        "position": "31.402833938598633, 3.0963196754455566, 19.847049713134766",
+        "walkSpeed": 20,
+        "health": 100
+      },
+      "collected": [
+        "Crystal1",
+        "Crystal2",
+        "Crystal16",
+        "Crystal4",
+        "Crystal1"
+      ]
+    },
+    {
+      "scenario": "clean_five_crystals_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 160,
+        "Carried": 5,
+        "SpeedLevel": 1,
+        "Coins": 0
+      },
+      "position": "31.40283203125, 3.0963134765625, 19.8470458984375",
+      "walkSpeed": 20,
+      "health": 100
+    },
+    {
+      "scenario": "clean_sixth_crystal_rejected",
+      "context": "Client",
+      "hud": "Crystals 5/5   Coins 0   Speed +1   Time 149s",
+      "attributes": {
+        "SpeedLevel": 1,
+        "Carried": 5,
+        "RoundTime": 149,
+        "Coins": 0
+      },
+      "position": "-18.754257202148438, 3.0963196754455566, -19.732772827148438",
+      "walkSpeed": 20,
+      "health": 100
+    },
+    {
+      "scenario": "clean_capacity_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 141,
+        "Carried": 5,
+        "SpeedLevel": 1,
+        "Coins": 0
+      },
+      "position": "-18.7542724609375, 3.0963134765625, -19.7327880859375",
+      "walkSpeed": 20,
+      "health": 100
+    },
+    {
+      "scenario": "clean_deposit_five_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 50   Speed +1   Time 129s",
+      "attributes": {
+        "SpeedLevel": 1,
+        "Carried": 0,
+        "RoundTime": 129,
+        "Coins": 50
+      },
+      "position": "-0.668558657169342, 4.096319675445557, 35.00034713745117",
+      "walkSpeed": 20,
+      "health": 100
+    },
+    {
+      "scenario": "clean_deposit_five_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 121,
+        "Carried": 0,
+        "SpeedLevel": 1,
+        "Coins": 50
+      },
+      "position": "-0.6685791015625, 4.0963134765625, 35.0003662109375",
+      "walkSpeed": 20,
+      "health": 100
+    },
+    {
+      "scenario": "clean_second_purchase_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 20   Speed +2   Time 98s",
+      "attributes": {
+        "SpeedLevel": 2,
+        "Carried": 0,
+        "RoundTime": 98,
+        "Coins": 20
+      },
+      "position": "19.519371032714844, 4.096319675445557, 35.00053787231445",
+      "walkSpeed": 24,
+      "health": 100
+    },
+    {
+      "scenario": "clean_second_upgrade_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 88,
+        "Carried": 0,
+        "SpeedLevel": 2,
+        "Coins": 20
+      },
+      "position": "19.5194091796875, 4.0963134765625, 35.00048828125",
+      "walkSpeed": 24,
+      "health": 100
+    },
+    {
+      "scenario": "clean_earn_for_third_upgrade",
+      "context": "Client",
+      "state": {
+        "hud": "Crystals 5/5   Coins 20   Speed +2   Time 74s",
+        "attributes": {
+          "Coins": 20,
+          "Carried": 5,
+          "RoundTime": 74,
+          "SpeedLevel": 2
+        },
+        "position": "27.431150436401367, 3.0963196754455566, 9.100268363952637",
+        "walkSpeed": 24,
+        "health": 100
+      },
+      "collected": [
+        "Crystal2",
+        "Crystal4",
+        "Crystal1",
+        "Crystal14",
+        "Crystal2"
+      ]
+    },
+    {
+      "scenario": "clean_third_upgrade_earnings_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 67,
+        "Carried": 5,
+        "SpeedLevel": 2,
+        "Coins": 20
+      },
+      "position": "27.43115234375, 3.0963134765625, 9.10028076171875",
+      "walkSpeed": 24,
+      "health": 100
+    },
+    {
+      "scenario": "clean_second_full_deposit_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 70   Speed +2   Time 50s",
+      "attributes": {
+        "SpeedLevel": 2,
+        "Carried": 0,
+        "RoundTime": 50,
+        "Coins": 70
+      },
+      "position": "-0.8022506237030029, 4.096319675445557, 35.0006217956543",
+      "walkSpeed": 24,
+      "health": 100
+    },
+    {
+      "scenario": "clean_second_full_deposit_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 18,
+        "Carried": 0,
+        "SpeedLevel": 2,
+        "Coins": 70
+      },
+      "position": "-0.80224609375, 4.0963134765625, 35.0006103515625",
+      "walkSpeed": 24,
+      "health": 100
+    },
+    {
+      "scenario": "clean_third_purchase_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 40   Speed +3   Time 9s",
+      "attributes": {
+        "SpeedLevel": 3,
+        "Carried": 0,
+        "RoundTime": 9,
+        "Coins": 40
+      },
+      "position": "19.009857177734375, 4.096319675445557, 35.000938415527344",
+      "walkSpeed": 28,
+      "health": 100
+    },
+    {
+      "scenario": "clean_third_upgrade_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 3,
+        "Carried": 0,
+        "SpeedLevel": 3,
+        "Coins": 40
+      },
+      "position": "19.0098876953125, 4.0963134765625, 35.0009765625",
+      "walkSpeed": 28,
+      "health": 100
+    },
+    {
+      "scenario": "clean_fourth_purchase_touch",
+      "context": "Client",
+      "hud": "Crystals 0/5   Coins 40   Speed +3   Time 168s",
+      "attributes": {
+        "SpeedLevel": 3,
+        "Carried": 0,
+        "RoundTime": 168,
+        "Coins": 40
+      },
+      "position": "19.26397705078125, 4.096319675445557, 35.00099182128906",
+      "walkSpeed": 28,
+      "health": 100
+    },
+    {
+      "scenario": "clean_upgrade_cap_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 164,
+        "Carried": 0,
+        "SpeedLevel": 3,
+        "Coins": 40
+      },
+      "position": "19.2640380859375, 4.0963134765625, 35.0009765625",
+      "walkSpeed": 28,
+      "health": 100
+    },
+    {
+      "scenario": "clean_round_rollover",
+      "context": "Server",
+      "Restarted": true,
+      "Ticked": true,
+      "SawZero": true,
+      "InitialTime": 131
+    },
+    {
+      "scenario": "clean_character_respawn",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 135,
+        "Carried": 0,
+        "SpeedLevel": 3,
+        "Coins": 40
+      },
+      "position": "-1.9004104137420654, 4.106331825256348, 22.80187225341797",
+      "walkSpeed": 28,
+      "health": 100
+    },
+    {
+      "scenario": "clean_respawn_server",
+      "context": "Server",
+      "attributes": {
+        "RoundTime": 131,
+        "Carried": 0,
+        "SpeedLevel": 3,
+        "Coins": 40
+      },
+      "position": "-1.900390625, 4.0963134765625, 22.8018798828125",
+      "walkSpeed": 28,
+      "health": 100
+    },
+    {
+      "scenario": "clean_respawn_hud",
+      "context": "Client",
+      "position": "168.5, 555",
+      "viewport": "797, 693",
+      "text": "Crystals 0/5   Coins 40   Speed +3   Time 127s",
+      "fits": true,
+      "size": "460, 56"
+    },
+    {
+      "scenario": "clean_server_output",
+      "context": "Server",
+      "errorsAndWarnings": []
+    },
+    {
+      "scenario": "clean_client_output",
+      "context": "Client",
+      "errorsAndWarnings": []
+    },
+    {
+      "scenario": "final_arena_and_cleanup",
+      "context": "Server",
+      "arenaParts": 22,
+      "crystals": 18,
+      "temporaryProbeRemoved": true
+    }
+  ],
+  "studioOutput": "",
+  "allFourRuntimeSourcesMatchDisk": true,
+  "sourceSha256": {
+    "src/shared/Config.lua": "ad2c6f0a700e1020c827dc6deac270f893fa97aefc2f8956b8ab56f393a352eb",
+    "src/shared/Economy.lua": "b0429a700fe25cbd0be872a11a3b6ef959edfd25a8610672ed90baa20b7a5bec",
+    "src/server/main.server.lua": "0157dbc364b2582d7c83c3d7604de9cdd5fd1d75fc4581897d2b0a2c520a9bdf",
+    "src/client/main.client.lua": "8559440a0fbce94448c54d48ea4a9e387888fd74d00013cf925c39bbd83b8487"
+  }
+}

@@ -54,3 +54,26 @@ speed cap, HUD values and timer, and character respawn. Collect and purchase
 through actual touch interactions; do not grant currency or mutate gameplay
 attributes to manufacture a passing result. Read server and client Output, capture
 visual evidence, and remove temporary probes before ending the playtest.
+
+`tests/StudioAcceptance.luau` provides bounded MCP probes for this flow. Read the
+file from disk and evaluate it inside a function through `execute_luau`, then call
+the returned factory with tuning evaluated from the repository's `Config.lua`,
+then call the resulting table's methods. The MCP sandbox cannot necessarily
+`require` an existing game module; passing tuning avoids changing its capabilities.
+Do not create or edit a Studio script to load the probe.
+`collect`, `visitPad`, `checkCapacity`, `checkRespawn`, and `checkHUD` run on Client;
+`expectServer`, `beginRoundProbe`, `finishRoundProbe`, and `respawnCharacter` run
+on Server. Movement starts the character near a target, then uses Humanoid
+movement and actual physics touch events. Rewards and purchases use the game's
+handlers; the probe never writes inventory, coins, speed level, or round time.
+
+From a fresh playtest, check server state `(Carried, Coins, SpeedLevel)` at these
+milestones: `(0,0,0)` → collect three `(3,0,0)` → deposit `(0,30,0)` → buy speed
+`(0,0,1)` with WalkSpeed 20. Fill to five, attempt a sixth, deposit for 50 coins,
+and earn enough through additional collection/deposit cycles to reach level
+three. Attempt another purchase with sufficient coins and confirm the cap.
+The round observer requires a natural countdown through zero and restart; it
+removes its temporary folder and event connection when finished. Stop play after
+reading both server state and client HUD and checking Output.
+
+The completed 2026-10-02 acceptance run is recorded in [VALIDATION.md](VALIDATION.md).
