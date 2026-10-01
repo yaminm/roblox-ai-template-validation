@@ -52,8 +52,8 @@ end
 local function updateSpeed(player: Player)
 	local humanoid = player.Character and player.Character:FindFirstChildOfClass("Humanoid")
 	if humanoid then
-		humanoid.WalkSpeed =
-			Config.BaseWalkSpeed + player:GetAttribute("SpeedLevel") * Config.SpeedPerLevel
+		local level = player:GetAttribute("SpeedLevel") :: number
+		humanoid.WalkSpeed = Config.BaseWalkSpeed + level * Config.SpeedPerLevel
 	end
 end
 

@@ -84,7 +84,7 @@ Before editing:
 For implementation:
 1. Make the smallest coherent change.
 2. Keep persistent source changes on disk, not in MCP Script.Source.
-3. Run `lune run scripts/verify.luau` and repair failures.
+3. Run `./scripts/verify.sh` and repair failures.
 4. Start/sync Rojo according to the repository setup.
 5. Use Roblox Studio MCP to inspect relevant instances.
 6. Start a playtest and exercise the actual changed behavior.
