@@ -84,7 +84,7 @@ Before editing:
 For implementation:
 1. Make the smallest coherent change.
 2. Keep persistent source changes on disk, not in MCP Script.Source.
-3. Run `lune run scripts/verify.luau` and repair failures.
+3. Run `./scripts/verify.sh` and repair failures.
 4. Start/sync Rojo according to the repository setup.
 5. Use Roblox Studio MCP to inspect relevant instances.
 6. Start a playtest and exercise the actual changed behavior.
@@ -129,9 +129,9 @@ Do not publish/deploy, mutate production DataStores/Open Cloud, upload paid/publ
 
 ## Current status and next mission
 
-The project was created as the validation copy of the reusable template and contains an initial Crystal Rush V1 implementation. It has not yet been proven end-to-end on the user's workstation with Roblox Studio MCP.
+The project was created as the validation copy of the reusable template and contains a Crystal Rush V1 implementation. Repository verification and single-player Studio/MCP acceptance passed on 2026-10-02; see [VALIDATION.md](VALIDATION.md) for observed evidence and limits.
 
-The next mission for Codex is therefore validation and repair, not feature expansion:
+Future changes should repeat the validation and repair workflow, without feature expansion:
 
 1. inspect the repository and understand its contract;
 2. make the local toolchain/install/bootstrap work cleanly;
