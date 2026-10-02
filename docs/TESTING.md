@@ -26,6 +26,12 @@ writer, avoiding unauthenticated download rate limits.
 
 Bootstrap also downloads checksum-pinned Roblox definitions from luau-lsp
 1.70.1. Verification checks Git whitespace errors in staged and unstaged changes,
+and in committed changes. CI fetches full history and supplies `VERIFY_BASE_SHA`
+as the PR base or pre-push commit; locally it defaults to the parent of `HEAD`.
+An initial commit/push is checked against the empty tree. An unavailable explicit
+base fails verification rather than silently skipping the check. To check an
+entire branch locally, run `VERIFY_BASE_SHA=<base-commit> ./scripts/verify.sh`.
+Verification also checks
 the definitions, formatting, linting, Rojo sourcemap,
 Roblox-aware type analysis, and unit tests, then creates
 `build/CrystalRush.rbxlx`. The single shell entry point is the verification gate;

@@ -8,6 +8,20 @@ echo "==> Git whitespace checks"
 git diff --check
 git diff --cached --check
 
+# CI supplies the PR base or pre-push SHA; locally check the latest commit.
+whitespace_base="${VERIFY_BASE_SHA:-}"
+if [[ "$whitespace_base" == "0000000000000000000000000000000000000000" ]]; then
+  whitespace_base="$(git hash-object -t tree /dev/null)"
+elif [[ -z "$whitespace_base" ]]; then
+  if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+    whitespace_base="HEAD^"
+  else
+    whitespace_base="$(git hash-object -t tree /dev/null)"
+  fi
+fi
+echo "==> Committed whitespace check against $whitespace_base"
+git diff --check "$whitespace_base" HEAD
+
 if ! command -v python3 >/dev/null; then
   echo 'Python 3 is required; see docs/TESTING.md.' >&2
   exit 1

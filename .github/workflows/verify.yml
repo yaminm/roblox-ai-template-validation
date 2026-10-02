@@ -17,6 +17,8 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          fetch-depth: 0
       - name: Install Rokit 1.2.0
         shell: bash
         run: |
@@ -29,4 +31,6 @@ jobs:
       - name: Bootstrap pinned toolchain
         run: ./scripts/bootstrap.sh
       - name: Run canonical verification gate
+        env:
+          VERIFY_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: ./scripts/verify.sh
