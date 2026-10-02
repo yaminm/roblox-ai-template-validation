@@ -3,6 +3,11 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 export PATH="${ROKIT_ROOT:-$HOME/.rokit}/bin:$PATH"
+
+echo "==> Git whitespace checks"
+git diff --check
+git diff --cached --check
+
 if ! command -v python3 >/dev/null; then
   echo 'Python 3 is required; see docs/TESTING.md.' >&2
   exit 1

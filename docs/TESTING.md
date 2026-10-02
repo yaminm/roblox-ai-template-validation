@@ -18,8 +18,15 @@ back to a different CLI account. Without that login it uses existing Rokit authe
 if GitHub rate-limits downloads, sign in with `gh auth login --hostname github.com`
 and rerun bootstrap. Do not paste credentials into repository files.
 
+The GitHub Actions workflow `.github/workflows/verify.yml` runs on pull requests
+and pushes to `main`. It installs Rokit 1.2.0, runs the same bootstrap, then
+`./scripts/verify.sh`; there is no separate CI verification path. Its read-only
+GitHub token is passed through GitHub CLI to the existing private Rokit credential
+writer, avoiding unauthenticated download rate limits.
+
 Bootstrap also downloads checksum-pinned Roblox definitions from luau-lsp
-1.70.1. Verification checks the definitions, formatting, linting, Rojo sourcemap,
+1.70.1. Verification checks Git whitespace errors in staged and unstaged changes,
+the definitions, formatting, linting, Rojo sourcemap,
 Roblox-aware type analysis, and unit tests, then creates
 `build/CrystalRush.rbxlx`. The single shell entry point is the verification gate;
 Lune runs only the pure unit tests. Run either script from any directory.

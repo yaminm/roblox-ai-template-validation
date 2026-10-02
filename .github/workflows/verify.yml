@@ -1,0 +1,32 @@
+name: Repository verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Canonical verification gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install Rokit 1.2.0
+        shell: bash
+        run: |
+          gh release download v1.2.0 --repo rojo-rbx/rokit \
+            --pattern rokit-1.2.0-linux-x86_64.zip --dir "$RUNNER_TEMP/rokit"
+          unzip "$RUNNER_TEMP/rokit/rokit-1.2.0-linux-x86_64.zip" -d "$RUNNER_TEMP/rokit"
+          mkdir -p "$HOME/.rokit/bin"
+          install -m 755 "$RUNNER_TEMP/rokit/rokit" "$HOME/.rokit/bin/rokit"
+          echo "$HOME/.rokit/bin" >> "$GITHUB_PATH"
+      - name: Bootstrap pinned toolchain
+        run: ./scripts/bootstrap.sh
+      - name: Run canonical verification gate
+        run: ./scripts/verify.sh
